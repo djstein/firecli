@@ -1,5 +1,5 @@
 import click
-from recreatedb.core import configuration
+
 
 @click.group()
 def cli():
@@ -11,13 +11,10 @@ def cli():
     #     print("Please use a Python 3.6 virtualenv.")
     #     raise SystemExit
 
-@cli.command(None)
-def run(user, cli):
-    configuration()
 
 @cli.command('configure')
 def configure(user, cli):
-    configuration()
+    print('configuring')
 
 
 def main():
