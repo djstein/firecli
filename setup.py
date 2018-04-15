@@ -8,9 +8,9 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'firecli'
-DESCRIPTION = 'Set of command line tools for Financial Independience Retire Early (FIRE) calculations'
-URL = 'https://github.com/djstein/firecli'
+NAME = 'recreatedb'
+DESCRIPTION = 'Recreate a Postgres DB for Django Development'
+URL = 'https://github.com/modernproject/recreatedb'
 EMAIL = 'djstein@ncsu.edu'
 AUTHOR = 'Dylan Stein'
 
@@ -26,7 +26,7 @@ with io.open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
 
 # Load the package's __version__.py module as a dictionary.
 about = {}
-with open(os.path.join(here, 'firecli', '__version__.py')) as f:
+with open(os.path.join(here, 'recreatedb', '__version__.py')) as f:
     exec(f.read(), about)
 
 
@@ -75,7 +75,7 @@ setup(
     url=URL,
     packages=find_packages(exclude=('tests',)),
     entry_points={
-        'console_scripts': ['fire=firecli.cli:main'],
+        'console_scripts': ['recreatedb=recreatedb.cli:main'],
     },
     install_requires=REQUIRED,
     include_package_data=True,
